@@ -39,10 +39,10 @@
         src: "{{ backupdir.path }}/dump.tar.gz"
         dest: "{{ local_tmp.path }}/"
         flat: true
-    - name: remove database dump from master
-      file:
-        path: "{{ backupdir.path }}"
-        state: absent
+    #- name: remove database dump from master
+    #  file:
+    #    path: "{{ backupdir.path }}"
+    #    state: absent
 
 - hosts: "{{ slave }}"
   tasks:
